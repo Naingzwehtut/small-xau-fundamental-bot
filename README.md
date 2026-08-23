@@ -170,20 +170,6 @@ edge cases, and report generation.
 > gold (bullish).
 ```
 
-## Extending the bot
-
-- **Add a new factor:** write a `score_xxx()` function in `scoring.py`
-  following the existing pattern (return a `FactorScore`), add it to
-  `compute_bias()`, and add a weight to `config.WEIGHTS` (weights must
-  sum to 1.0 across all active factors — enforced by an assertion in
-  `config.py`).
-- **Change weights or thresholds:** everything tunable lives in
-  `config.py` — no need to touch the scoring logic itself.
-- **Send alerts:** `generator.to_json()` returns a clean payload you can
-  pipe into Slack/Discord/email webhooks from `main.py`.
-- **Backtest:** `sample_data.py` shows the data shapes expected by
-  `scoring.compute_bias()` — swap in historical FRED/Yahoo pulls for a
-  given date to backtest how the score would have read historically.
 
 ## Important notes
 
