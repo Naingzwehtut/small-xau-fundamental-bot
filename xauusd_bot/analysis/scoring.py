@@ -30,7 +30,7 @@ data structures and returns scores, so it's easy to unit test.
 from __future__ import annotations
 
 from dataclasses import dataclass
-from typing import Dict, List, Optional
+from typing import Dict, List
 
 from xauusd_bot import config
 from xauusd_bot.fetchers.fred_fetcher import Observation, latest_value, percent_change
