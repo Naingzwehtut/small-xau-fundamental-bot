@@ -14,7 +14,7 @@ so it is safe to import from anywhere in the project without side effects.
 """
 
 import os
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 from typing import Dict
 
 # ---------------------------------------------------------------------------
